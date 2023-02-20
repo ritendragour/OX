@@ -7,30 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <title>OX</title>
 </head>
 
 <body>
-    <div class="main">
+    <div class="formAns">
+        <form>
+            <h1 class="text-center">Start Game OX</h1>
+            <span><label>Please Enter X Player Name</label>
+                <input type="text" class="form-control" id="xName" required>
+            </span>
+            <span><label>Please Enter O Player Name</label>
+                <input type="text" class="form-control" id="oName" required>
+            </span>
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
 
-        
-    <span>
-        <button id="b1" onclick="bf1()" class="btn btn-primary FontSize"></button>
-        <button id="b2" onclick="bf2()" class="btn btn-primary FontSize"></button>
-        <button id="b3" onclick="bf3()" class="btn btn-primary FontSize"></button>
-    </span>
-    <span>
-        <button id="b4" onclick="bf4()" class="btn btn-primary FontSize"></button>
-        <button id="b5" onclick="bf5()" class="btn btn-primary FontSize"></button>
-        <button id="b6" onclick="bf6()" class="btn btn-primary FontSize"></button>
-    </span>
-    <span>
-        <button id="b7" onclick="bf7()" class="btn btn-primary FontSize"></button>
-        <button id="b8" onclick="bf8()" class="btn btn-primary FontSize"></button>
-        <button id="b9" onclick="bf9()" class="btn btn-primary FontSize"></button>
-    </span>
-</div>
+        <div class="main" style="display: none;">
+            <h1 class="text-center" style="color: white; padding-top: 20px;"><u>BEST OF LUCK</u></h1>
+        <span>
+            <button id="b1" onclick="bf1()" class="btn btn-light FontSize"></button>
+            <button id="b2" onclick="bf2()" class="btn btn-light FontSize"></button>
+            <button id="b3" onclick="bf3()" class="btn btn-light FontSize"></button>
+        </span>
+        <span>
+            <button id="b4" onclick="bf4()" class="btn btn-light FontSize"></button>
+            <button id="b5" onclick="bf5()" class="btn btn-light FontSize"></button>
+            <button id="b6" onclick="bf6()" class="btn btn-light FontSize"></button>
+        </span>
+        <span>
+            <button id="b7" onclick="bf7()" class="btn btn-light FontSize"></button>
+            <button id="b8" onclick="bf8()" class="btn btn-light FontSize"></button>
+            <button id="b9" onclick="bf9()" class="btn btn-light FontSize"></button>
+        </span>
+    </div>
     <script src="./main.js"></script>
 </body>
 

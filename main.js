@@ -1,4 +1,31 @@
+//form
+let form = document.querySelector('form')
+let Xname = document.getElementById('xName')
+let Oname = document.getElementById('oName') 
+let main = document.querySelector('.main')
 
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    document.querySelector('.formAns').style.display = 'none'
+    main.style.display = 'block'
+})
+
+
+console.log()
+//win X
+function winX(){
+    alert(Xname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Oname.value)
+    location.reload()
+}
+
+//win O
+function winO(){
+    alert(Oname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Xname.value)
+    location.reload()
+}
+
+//game
 let b1 = document.getElementById('b1')
 let b2 = document.getElementById('b2')
 let b3 = document.getElementById('b3')
@@ -163,16 +190,4 @@ function win() {
     if (b4.innerText == 'O' && b5.innerText == 'O' && b6.innerText == 'O') {
         winO()
     }
-}
-
-//win X
-function winX(){
-    alert('X is Win\nPlease Play again\nBETTER LUCK NEXT TIME O')
-    location.reload()
-}
-
-//win O
-function winO(){
-    alert('O is Win\nPlease Play again\nBETTER LUCK NEXT TIME X')
-    location.reload()
 }
