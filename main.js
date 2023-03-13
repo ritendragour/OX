@@ -11,23 +11,9 @@ form.addEventListener('submit', (e)=>{
     main.style.display = 'block'
 })
 
-
-console.log()
-//win X
-function winX(){
-    alert(Xname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Oname.value)
-    location.reload()
-}
-
-//win O
-function winO(){
-    alert(Oname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Xname.value)
-    location.reload()
-}
-
 //game
 let b1 = document.getElementById('b1')
-let b2 = document.getElementById('b2')
+let b2 = document.getElementById('b2')  
 let b3 = document.getElementById('b3')
 let b4 = document.getElementById('b4')
 let b5 = document.getElementById('b5')
@@ -40,11 +26,12 @@ let clicks = 0;
 
 function bf1() {
     if (b1.innerText === '') {
-        if ((clicks += 1) % 2 !== 0) {
+        if ((clicks += 1) % 2 !== 0) { //clicsk = clicks +1
             b1.innerText = 'X'
         } else {
             b1.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -55,8 +42,9 @@ function bf2() {
         } else {
             b2.innerText = 'O'
         }
-        win()
+        playAgain()
     }
+    win()
 }
 function bf3() {
     if (b3.innerText === '') {
@@ -65,6 +53,7 @@ function bf3() {
         } else {
             b3.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -75,6 +64,7 @@ function bf4() {
         } else {
             b4.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -84,7 +74,8 @@ function bf5() {
             b5.innerText = 'X'
         } else {
             b5.innerText = 'O'
-        }
+        }       
+        playAgain()
     }
     win()
 }
@@ -92,10 +83,11 @@ function bf6() {
     if (b6.innerText === '') {
         if ((clicks += 1) % 2 !== 0) {
             b6
-                .innerText = 'X'
+            .innerText = 'X'
         } else {
             b6.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -106,6 +98,7 @@ function bf7() {
         } else {
             b7.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -116,6 +109,7 @@ function bf8() {
         } else {
             b8.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -126,6 +120,7 @@ function bf9() {
         } else {
             b9.innerText = 'O'
         }
+        playAgain()
     }
     win()
 }
@@ -135,59 +130,78 @@ function win() {
        winX()
     }
 
-    if (b3.innerText == 'X' && b6.innerText == 'X' && b9.innerText == 'X') {
+    else if (b3.innerText == 'X' && b6.innerText == 'X' && b9.innerText == 'X') {
         winX()
-        }
-
-    if (b7.innerText == 'X' && b8.innerText == 'X' && b9.innerText == 'X') {
+    }
+    
+    else if (b7.innerText == 'X' && b8.innerText == 'X' && b9.innerText == 'X') {
+        winX()
+    }
+    
+    else if (b1.innerText == 'X' && b4.innerText == 'X' && b7.innerText == 'X') {
+        winX()
+    }
+    
+    else if (b1.innerText == 'X' && b5.innerText == 'X' && b9.innerText == 'X') {
         winX()
     }
 
-    if (b1.innerText == 'X' && b4.innerText == 'X' && b7.innerText == 'X') {
+    else if (b3.innerText == 'X' && b5.innerText == 'X' && b7.innerText == 'X') {
         winX()
     }
-
-    if (b1.innerText == 'X' && b5.innerText == 'X' && b9.innerText == 'X') {
+    else if (b2.innerText == 'X' && b5.innerText == 'X' && b8.innerText == 'X') {
         winX()
     }
-
-    if (b3.innerText == 'X' && b5.innerText == 'X' && b7.innerText == 'X') {
-        winX()
-    }
-    if (b2.innerText == 'X' && b5.innerText == 'X' && b8.innerText == 'X') {
-        winX()
-    }
-    if (b4.innerText == 'X' && b5.innerText == 'X' && b6.innerText == 'X') {
+    else if (b4.innerText == 'X' && b5.innerText == 'X' && b6.innerText == 'X') {
         winX()
     }
     //O
-    if (b1.innerText == 'O' && b2.innerText == 'O' && b3.innerText == 'O') {
+    else if (b1.innerText == 'O' && b2.innerText == 'O' && b3.innerText == 'O') {
         winO()
     }
 
-    if (b3.innerText == 'O' && b6.innerText == 'O' && b9.innerText == 'O') {
+    else if (b3.innerText == 'O' && b6.innerText == 'O' && b9.innerText == 'O') {
+        winO()
+    }
+    
+    else if (b7.innerText == 'O' && b8.innerText == 'O' && b9.innerText == 'O') {
         winO()
     }
 
-    if (b7.innerText == 'O' && b8.innerText == 'O' && b9.innerText == 'O') {
+    else if (b1.innerText == 'O' && b4.innerText == 'O' && b7.innerText == 'O') {
         winO()
     }
+    
+    else if (b1.innerText == 'O' && b5.innerText == 'O' && b9.innerText == 'O') {
+        winO()
+    }
+    
+    else if (b3.innerText == 'O' && b5.innerText == 'O' && b7.innerText == 'O') {
+        winO()
+    }
+    else if (b2.innerText == 'O' && b5.innerText == 'O' && b8.innerText == 'O') {
+        winO()
+    }
+    else if (b4.innerText == 'O' && b5.innerText == 'O' && b6.innerText == 'O') {
+        winO()
+    }
+}
 
-    if (b1.innerText == 'O' && b4.innerText == 'O' && b7.innerText == 'O') {
-        winO()
-    }
+//win X
+function winX(){
+    alert(Xname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Oname.value)
+    location.reload()
+}
 
-    if (b1.innerText == 'O' && b5.innerText == 'O' && b9.innerText == 'O') {
-        winO()
-    }
+//win O
+function winO(){
+    alert(Oname.value+' is Win\nPlease Play again\nBETTER LUCK NEXT TIME '+Xname.value)
+    location.reload()
+}
 
-    if (b3.innerText == 'O' && b5.innerText == 'O' && b7.innerText == 'O') {
-        winO()
-    }
-    if (b2.innerText == 'O' && b5.innerText == 'O' && b8.innerText == 'O') {
-        winO()
-    }
-    if (b4.innerText == 'O' && b5.innerText == 'O' && b6.innerText == 'O') {
-        winO()
+function playAgain(){
+        if(b1.innerText && b2.innerText && b3.innerText && b4.innerText && b5.innerText && b6.innerText && b7.innerText && b8.innerText && b9.innerText){
+            win()
+            location.reload();
     }
 }

@@ -34,8 +34,6 @@
 form{
     background-color: rgba(124, 98, 98, 0.4);
     padding:  50px 100px 50px 100px;
-    /* width: 40%;
-    height: 60%; */
 }
 label{
     font-size: 22px;
@@ -45,4 +43,10 @@ input{
 }
 h1{
     padding-bottom: 30PX;
+}
+@media (max-width:400px) {
+    form{
+        padding:  50px;
+    }
+    
 }
